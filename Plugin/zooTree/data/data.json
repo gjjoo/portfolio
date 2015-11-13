@@ -1,0 +1,11 @@
+[
+    { "label" : "root",         "itemId" : "root",     "parentId" : "999",     "order" : "1" },
+    { "label" : "User",         "itemId" : "role1",    "parentId" : "root",    "order" : "2" },
+    { "label" : "subUser1",     "itemId" : "role11",   "parentId" : "role1",   "order" : "3" },
+    { "label" : "subUser2",     "itemId" : "role12",   "parentId" : "role1",   "order" : "4" },
+    { "label" : "subUser2-1",   "itemId" : "role121",  "parentId" : "role12",  "order" : "5" },
+    { "label" : "subUser2-1-1", "itemId" : "role1211", "parentId" : "role121", "order" : "6" },
+    { "label" : "subUser2-1-2", "itemId" : "role1212", "parentId" : "role121", "order" : "7" },
+    { "label" : "Admin",	    "itemId" : "role2",    "parentId" : "root",    "order" : "8" },
+    { "label" : "Guest",	    "itemId" : "role3",    "parentId" : "root",    "order" : "9" }
+]
