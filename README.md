@@ -3,7 +3,7 @@
 - [...](README.md)
 
 ###### Mobile
-- [LG Fashion](LG_Fashion(Mobile)/README.md)
+- [LG Fashion](LG_Fashion(Mobile))
 
 ###### Responsive
 - [네이버 댓글](네이버_댓글(Rsponsive)/README.md)
