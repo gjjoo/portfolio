@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/* 공통 */
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select { margin: 0; padding: 0; }
+
+body, input, textarea, select, button, table { font-family: Helvetica; font-size: 14px; line-height: 1.25em; }
+
+body { -webkit-text-size-adjust: none; }
+
+img, fieldset { border: 0; }
+
+ul, ol { list-style: none; }
+
+em, address { font-style: normal; }
+
+a { color: #000; text-decoration: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+img { vertical-align: top; }
+
+button { border: 0; }
+
+button span { position: relative; }
+
+body { font-family: '나눔고딕', '맑은고딕'; background: LightSteelBlue; }
+
+/* 웹 접근성을 위한 감추기 */
+.blind { overflow: hidden; position: absolute; left: 0; width: 1px; height: 1px; font-size: 0; line-height: 0; white-space: nowrap; }
+
+/* 팝업 */
+#pop { background: url(../img/pop_bg_top.png) no-repeat 0 0; width: 486px; position: absolute; top: 50%; left: 50%; margin-top: -125px; margin-left: -237px; }
+#pop #popInner { background: url(../img/pop_bg.png) no-repeat 0 100%; margin-top: 9px; position: relative; }
+#pop #popInner #popHdLine { margin: 0 8px 0 4px; border-bottom: 4px solid #115fad; }
+#pop #popInner #popHdLine .tit { padding: 15px 20px 0 20px; height: 38px; font-size: 19px; line-height: 20px; }
+#pop #popInner #popCtLine { text-align: center; padding: 35px 0; margin: 0 8px 0 4px; }
+#pop #popInner #popCtLine p { font-size: 13px; line-height: 22px; }
+#pop #popInner #popBtnLine { height: 70px; text-align: center; margin: 0 8px 0 4px; }
+#pop #popInner #popBtnLine .btn { background: url(../img/pop_btn.png) no-repeat 0 0; display: inline-block; height: 30px; white-space: nowrap; }
+#pop #popInner #popBtnLine .btn span { background: url(../img/pop_btn.png) no-repeat 100% 0; display: block; margin-left: 3px; padding: 0 22px 0 20px; height: 30px; line-height: 30px; }
+#pop #popInner .close { position: absolute; top: 10px; right: 20px; height: 26px; width: 26px; }
+#pop #popInner .close span { display: block; background: url(../img/close.gif); height: 26px; width: 26px; overflow: hidden; font-size: 0; line-height: 0; }

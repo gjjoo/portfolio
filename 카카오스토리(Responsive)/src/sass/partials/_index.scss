@@ -1,0 +1,239 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+
+/* common */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+body,input,textarea,select,button,table{font-family:'나눔고딕', Nanum Gothic, 'Times New Roman', Times, serif;font-size:12px;line-height:1.5em;color:#555}
+body{-webkit-text-size-adjust:none}
+img,fieldset{border:0}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+a{color:#000;text-decoration:none}
+table{border-collapse:collapse;border-spacing:0}
+img{vertical-align:top}
+button{overflow:visible;border:0;background:transparent;white-space:nowrap;cursor:pointer}
+button span{position:relative}
+
+/* core */
+.blind{overflow:hidden;width:1px;height:1px;font-size:0;line-height:0;white-space:nowrap}
+.clear:after{display:block;clear:both;content:''}
+.sp{display:inline-block;overflow:hidden;background:url(../img/sp.png) no-repeat;line-height:99em;vertical-align:top;}
+
+/* Desktop */
+/* header */
+#header {
+  padding: 8px 0;
+  background-color: #d6604c;
+  border-bottom: 1px solid #c45644;
+}
+.gnb {
+  position: relative;
+  width: 916px;
+  margin: 0 auto;
+  color: #fff;
+  .sp_logo {
+    width: 159px;
+    height: 27px;
+    background-position: 0 0;
+  }
+  .setting {
+    float: right;
+  }
+  .sp_add {
+    margin-right: 16px;
+    width: 22px;
+    height: 28px;
+    background-position: -161px -24px;
+  }
+  .sp_info {
+    margin-right: 15px;
+    width: 24px;
+    height: 28px;
+    background-position: -185px -24px;
+  }
+  .sp_msg {
+    margin-right: 69px;
+    width: 29px;
+    height: 28px;
+    background-position: -211px -24px;
+  }
+  .mp_box {
+    display: inline-block;
+    position: absolute;
+    top: -8px;
+    right: 0;
+    padding: 6px 7px;
+    width: 33px;
+    height: 31px;
+    background-color: #c55340;
+    border-left: 1px solid #bd4e3c;
+    border-right: 1px solid #d96855;
+  }
+}
+.m_gnb {
+  text-align: center;
+  color: #fff;
+  display: none;
+}
+
+
+/* container */
+.bg_infobox {
+  background: url(../img/main.png) 0 0 no-repeat;
+  background-size: 100%
+}
+.bg_info {
+  width: 980px;
+  height: 356px;
+  margin: 0 auto;
+  background: url(../img/main.png) 50% 0 no-repeat;
+}
+.info {
+  width: 550px;
+  margin: 0 auto;
+  padding-top: 200px;
+  color: #fff;
+  img, .profile{
+    float: left;
+  }
+  .profile {
+    padding: 17px 20px;
+  }
+  .name {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .birth {
+    margin-top: 13px;
+    font-size: 13px;
+    color: #c3c1bf;
+  }
+  .sp_cake {
+    margin-left: 15px;
+    width: 14px;
+    height: 19px;
+    background-size: 200px 75px;
+    background-position: 0 -28px;
+    vertical-align: middle;
+  }
+  .intro {
+    margin-top: 9px;
+    font-size: 13px;
+  }  
+}
+
+.bg_lnbbox {
+  border-top: 1px solid #e2e2e4;
+  border-bottom: 1px solid #e2e2e4;
+}
+.lnb {
+  width: 550px;
+  margin: 0 auto;
+  border-left: 1px solid #e2e2e4;
+  border-right: 1px solid #e2e2e4;
+  ul {
+    display: block;
+    width: 100%;
+  }
+  li {
+    float: left;
+    width: 20%;
+    text-align: center;
+  }
+  li a {
+    display: block;
+    padding: 15px 20px;
+    border-right: 1px solid #e2e2e4;
+    font-size: 14px;
+    font-weight: 500;
+    color: #474c57;
+  }
+  li:last-child a {
+    border-right: 0;
+  }
+  li .sub {
+    display: inline-block;
+    margin-left: 2px;
+    font-size: 12px;
+    color: #bbbdc2;
+  }
+  li.active a {
+    background-color: #f4f4f4;
+  }
+  li.active .sub {
+    color: #df5b44;
+  }
+}
+.bg_contentbox {
+  background-color: #edeff1;
+}
+.content {
+  width: 550px;
+  height: 980px;
+  margin: 0 auto;
+  border-left: 1px solid #e2e2e4;
+  border-right: 1px solid #e2e2e4;
+  ul {
+    padding: 9px 0;
+  }
+  li {
+    float: left;
+    width: 50%;
+  }
+  li:nth-child(odd) .cnt_box {
+    padding: 9px 9px 9px 18px;
+  }
+  li:nth-child(even) .cnt_box {
+    padding: 9px 18px 9px 9px;
+  }
+  li .cnt_txt {
+    height: 100px;
+    background-color: #fff;
+  }
+  .song_title {
+
+  }
+  .song_author {
+
+  }
+  .song_etc {
+
+  }
+  .sp_like {
+
+  }
+  .sp_cmt {
+    
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .gnb, .bg_info {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .gnb, .bg_info {
+    width: 100%;
+  }
+  .gnb {
+    display: none;
+  }
+  .m_gnb {
+    display: block;
+  }
+  @media (max-width:550px) {
+    .info, .lnb, .content {
+      width: 100%;
+    }
+  }
+}
+
+/* Retina */
+@media (min-device-pixel-ratio : 1.5) {
+
+}

@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>LG Fashion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Start: wrap -->
+  <section id="wrap">
+
+    <!-- Start: header -->
+    <header>
+      <div class="gnb">
+        <a href="#" class="link_lnb"><span class="sp">메뉴</span></a>
+        <a href="#" class="link_logo"><h1 class="sp">LG패션</h1></a>
+        <a href="#" class="link_sch"><span class="sp">찾기</span></a>
+      </div>
+      <div class="main">
+        <p class="tit">STORE SEARCH</p>
+        <p class="tit_sub">LF 브랜드 매장을<br> 쉽고 편리하게 찾아보세요.</p>
+      </div>
+    </header>
+    <!-- End: header -->
+    
+    <!-- Start: content -->
+    <section id="content">
+      <nav>
+        <fieldset>
+          <legend class="blind">검색</legend>
+          <h2 class="tit">지역명, 매장명을 입력해 주세요.</h2>
+          <div class="input_box">
+            <input type="text" class="input_search" placeholder="검색어를 입력해주세요.">
+            <a href="#" class="link_sch2"><span class="sp"></span></a>
+          </div>
+          
+          <h2 class="tit">브랜드, 지역, 매장형태를 선택해주세요.</h2>
+<!--           <ul class="search_list">
+            <li><a href="#">브랜드<span class="sp arrow"></span></a></li>
+            <li class="on">
+              <a href="#">시 / 도<span class="sp arrow"></span></a>
+              <ul>
+                <li><a href="#">시 / 군 / 구<span class="sp arrow"></span></a></li>
+              </ul>
+            </li>
+            <li><a href="#">매장형태<span class="sp arrow"></span></a></li>
+          </ul> -->
+          <div class="select_style">
+            <label for="brand" class="blind">브랜드</label>
+            <select class="search_list2" id="brand">
+              <option value="">브랜드</option>
+              <option value="">헤지스</option>
+              <option value="">닥스</option>
+              <option value="">TNGT</option>
+            </select>
+          </div>
+          <div class="select_style">
+            <label for="si_do" class="blind">시 / 도</label>
+            <select class="search_list2" id="si_do">
+              <option value="">시 / 도</option>
+              <option value="">서울시</option>
+            </select>
+          </div>
+          <div class="select_style">
+            <label for="so_gun_gu" class="blind">시 / 군 / 구</label>
+            <select class="search_list2" id="so_gun_gu">
+              <option value="">시 / 군 / 구</option>
+              <option value="">강남구</option>
+            </select>
+          </div>
+          <div class="select_style">
+            <label for="market_type" class="blind">매장형태</label>
+            <select class="search_list2" id="market_type">
+              <option value="">매장형태</option>
+              <option value="">가두매장</option>
+            </select>
+          </div>
+          <button type="button" class="btn_search">검색<span class="sp sch3"></span></button>
+        </fieldset>
+      </nav>
+      
+      <article>
+        <h2 class="blind">검색결과</h2>
+        <p class="tit_result">
+          <strong class="color_red">'헤지스'&nbsp;'가두매장'&nbsp;'강남구'</strong><br>검색결과 총 <strong class="color_red">200건</strong>
+        </p>
+        <ul class="result_list clear">
+          <li>
+            <div class="box">
+              <div class="result_box">
+                <p class="result_name">홍대 주차장길 길모퉁이 어라운더 코너</p>
+                <p class="result_market">일반가두매장</p>
+                <p class="result_addr">서울 강북구 미아동 310번지 5호 1~2층 마에스트로 캐주얼</p>
+                <a href="tel:02-3654-3254" class="result_tel">Tel.&nbsp;02.3654.3254</a>
+              </div>
+              <a href="https://www.google.co.kr/maps/place/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EA%B0%95%EB%B6%81%EA%B5%AC+%EC%86%A1%EC%B2%9C%EB%8F%99+310-5/@37.6240807,127.0265491,15z/data=!3m1!4b1!4m2!3m1!1s0x357cbc6f09c6ae25:0xa807b984b28ae552" class="btn_map_view">MAP VIEW<span class="sp arrow2"></span></a>
+            </div>
+          </li>
+
+          <li>
+            <div class="box">
+              <div class="result_box">
+                <p class="result_name">롯데강남</p>
+                <p class="result_market">백화점</p>
+                <p class="result_addr">서울 강남구 대치동 937 마에스트로캐주얼</p>
+                <a href="tel:02-3654-3254" class="result_tel">Tel.&nbsp;02.3654.3254</a>
+              </div>
+              <a href="https://www.google.co.kr/maps/place/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EA%B0%95%EB%82%A8%EA%B5%AC+%EB%8C%80%EC%B9%98%EB%8F%99+937/@37.496925,127.0532731,15z/data=!3m1!4b1!4m2!3m1!1s0x357ca41c862cf517:0xc9b4ed7f28426493" class="btn_map_view">MAP VIEW<span class="sp arrow2"></span></a>
+            </div>
+          </li>
+
+          <li>
+            <div class="box">
+              <div class="result_box">
+                <p class="result_name">홍대 주차장길 길모퉁이 어라운더 코너</p>
+                <p class="result_market">일반가두매장</p>
+                <p class="result_addr">서울 강북구 미아동 310번지 5호 1~2층 마에스트로 캐주얼</p>
+                <a href="tel:02-3654-3254" class="result_tel">Tel.&nbsp;02.3654.3254</a>
+              </div>
+              <a href="https://www.google.co.kr/maps/place/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EA%B0%95%EB%B6%81%EA%B5%AC+%EC%86%A1%EC%B2%9C%EB%8F%99+310-5/@37.6240807,127.0265491,15z/data=!3m1!4b1!4m2!3m1!1s0x357cbc6f09c6ae25:0xa807b984b28ae552" class="btn_map_view">MAP VIEW<span class="sp arrow2"></span></a>
+            </div>
+          </li>
+
+          <li>
+            <div class="box">
+              <div class="result_box">
+                <p class="result_name">롯데강남</p>
+                <p class="result_market">백화점</p>
+                <p class="result_addr">서울 강남구 대치동 937 마에스트로캐주얼</p>
+                <a href="tel:02-3654-3254" class="result_tel">Tel.&nbsp;02.3654.3254</a>
+              </div>
+              <a href="https://www.google.co.kr/maps/place/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EA%B0%95%EB%82%A8%EA%B5%AC+%EB%8C%80%EC%B9%98%EB%8F%99+937/@37.496925,127.0532731,15z/data=!3m1!4b1!4m2!3m1!1s0x357ca41c862cf517:0xc9b4ed7f28426493" class="btn_map_view">MAP VIEW<span class="sp arrow2"></span></a>
+            </div>
+          </li>
+
+          <li>
+            <div class="box">
+              <div class="result_box">
+                <p class="result_name">홍대 주차장길 길모퉁이 어라운더 코너</p>
+                <p class="result_market">일반가두매장</p>
+                <p class="result_addr">서울 강북구 미아동 310번지 5호 1~2층 마에스트로 캐주얼</p>
+                <a href="tel:02-3654-3254" class="result_tel">Tel.&nbsp;02.3654.3254</a>
+              </div>
+              <a href="https://www.google.co.kr/maps/place/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EA%B0%95%EB%B6%81%EA%B5%AC+%EC%86%A1%EC%B2%9C%EB%8F%99+310-5/@37.6240807,127.0265491,15z/data=!3m1!4b1!4m2!3m1!1s0x357cbc6f09c6ae25:0xa807b984b28ae552" class="btn_map_view">MAP VIEW<span class="sp arrow2"></span></a>
+            </div>
+          </li>
+
+          <li>
+            <div class="box">
+              <div class="result_box">
+                <p class="result_name">롯데강남</p>
+                <p class="result_market">백화점</p>
+                <p class="result_addr">서울 강남구 대치동 937 마에스트로캐주얼</p>
+                <a href="tel:02-3654-3254" class="result_tel">Tel.&nbsp;02.3654.3254</a>
+              </div>
+              <a href="https://www.google.co.kr/maps/place/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EA%B0%95%EB%82%A8%EA%B5%AC+%EB%8C%80%EC%B9%98%EB%8F%99+937/@37.496925,127.0532731,15z/data=!3m1!4b1!4m2!3m1!1s0x357ca41c862cf517:0xc9b4ed7f28426493" class="btn_map_view">MAP VIEW<span class="sp arrow2"></span></a>
+            </div>
+          </li>
+
+          <li>
+            <div class="box">
+              <div class="result_box">
+                <p class="result_name">홍대 주차장길 길모퉁이 어라운더 코너</p>
+                <p class="result_market">일반가두매장</p>
+                <p class="result_addr">서울 강북구 미아동 310번지 5호 1~2층 마에스트로 캐주얼</p>
+                <a href="tel:02-3654-3254" class="result_tel">Tel.&nbsp;02.3654.3254</a>
+              </div>
+              <a href="https://www.google.co.kr/maps/place/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EA%B0%95%EB%B6%81%EA%B5%AC+%EC%86%A1%EC%B2%9C%EB%8F%99+310-5/@37.6240807,127.0265491,15z/data=!3m1!4b1!4m2!3m1!1s0x357cbc6f09c6ae25:0xa807b984b28ae552" class="btn_map_view">MAP VIEW<span class="sp arrow2"></span></a>
+            </div>
+          </li>
+
+          <li>
+            <div class="box">
+              <div class="result_box">
+                <p class="result_name">롯데강남</p>
+                <p class="result_market">백화점</p>
+                <p class="result_addr">서울 강남구 대치동 937 마에스트로캐주얼</p>
+                <a href="tel:02-3654-3254" class="result_tel">Tel.&nbsp;02.3654.3254</a>
+              </div>
+              <a href="https://www.google.co.kr/maps/place/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EA%B0%95%EB%82%A8%EA%B5%AC+%EB%8C%80%EC%B9%98%EB%8F%99+937/@37.496925,127.0532731,15z/data=!3m1!4b1!4m2!3m1!1s0x357ca41c862cf517:0xc9b4ed7f28426493" class="btn_map_view">MAP VIEW<span class="sp arrow2"></span></a>
+            </div>
+          </li>
+
+          <li>
+            <div class="box">
+              <div class="result_box">
+                <p class="result_name">홍대 주차장길 길모퉁이 어라운더 코너</p>
+                <p class="result_market">일반가두매장</p>
+                <p class="result_addr">서울 강북구 미아동 310번지 5호 1~2층 마에스트로 캐주얼</p>
+                <a href="tel:02-3654-3254" class="result_tel">Tel.&nbsp;02.3654.3254</a>
+              </div>
+              <a href="https://www.google.co.kr/maps/place/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EA%B0%95%EB%B6%81%EA%B5%AC+%EC%86%A1%EC%B2%9C%EB%8F%99+310-5/@37.6240807,127.0265491,15z/data=!3m1!4b1!4m2!3m1!1s0x357cbc6f09c6ae25:0xa807b984b28ae552" class="btn_map_view">MAP VIEW<span class="sp arrow2"></span></a>
+            </div>
+          </li>
+
+          <li>
+            <div class="box">
+              <div class="result_box">
+                <p class="result_name">롯데강남</p>
+                <p class="result_market">백화점</p>
+                <p class="result_addr">서울 강남구 대치동 937 마에스트로캐주얼</p>
+                <a href="tel:02-3654-3254" class="result_tel">Tel.&nbsp;02.3654.3254</a>
+              </div>
+              <a href="https://www.google.co.kr/maps/place/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EA%B0%95%EB%82%A8%EA%B5%AC+%EB%8C%80%EC%B9%98%EB%8F%99+937/@37.496925,127.0532731,15z/data=!3m1!4b1!4m2!3m1!1s0x357ca41c862cf517:0xc9b4ed7f28426493" class="btn_map_view">MAP VIEW<span class="sp arrow2"></span></a>
+            </div>
+          </li>
+        </ul>
+        <div class="box_load_more">
+          <button type="button" class="btn_load_more"><span class="sp arrow3"></span>LOAD MORE</button>
+        </div>
+      </article>
+    </section>
+    <!-- End: content -->
+
+    <!-- Start: footer -->
+    <footer>
+      <div class="line_info">
+        <a href="#header" class="bg_red"><span class="sp arrow4">TOP</span></a>
+        <div class="left_info">
+          <a href="#" class="info_desc">이용약관</a>
+        </div>
+        <div class="right_info">
+          <a href="#" class="info_pc">PC VER.</a>
+        </div>
+      </div>
+
+      <div class="copyright">Copyright 2014 LF.ALL rights reserved.</div>
+    </footer>
+    <!-- End: footer -->
+
+  </section>
+  <!-- End: wrap -->
+
+</body>
+</html>

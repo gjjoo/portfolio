@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+body {
+  letter-spacing: -1px;
+}
+
+#container {
+  background: url(../img/bg_sub.jpg) 50% 0 no-repeat;
+  border-bottom: 2px solid #334555;
+}
+
+
+.lnb_vtc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 204px;
+  height: 859px;
+  border-left: 1px solid #d3d2d3;
+  border-right: 1px solid #d3d2d3;
+  background: #fff;
+  letter-spacing: -2px;
+}
+.lnb_vtc .ban {
+  padding: 58px 44px 25px 41px;
+  border-bottom: 1px solid #d3d2d3;
+}
+.lnb_vtc .nav > li {
+  display: block;
+  border-bottom: 1px solid #d3d2d3;
+}
+.lnb_vtc .nav > li > a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #4b4b4b;
+  display: block;
+  padding: 18px 19px;
+}
+.lnb_vtc .nav ul {
+  padding: 15px 0 0 20px;
+  list-style: square;
+  background-color: #fbfbfb;
+}
+.lnb_vtc .nav ul > li {
+  margin-left: 15px;
+}
+.lnb_vtc .nav ul > li > a {
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  padding: 0 0 10px 0;
+  color: #4b4b4b;
+}
+.lnb_vtc .nav ul .active,
+.lnb_vtc .nav ul .active a {
+  color: #b1001a;
+}
+
+
+#content {
+  padding-left: 32px;
+  height: 859px;
+  margin-left: 206px;
+  border-left: 1px solid #e8e5e5;
+}
+#content .desc {
+  padding: 45px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #413c3c;
+}
+
+
+.content_header {
+  padding: 28px 0 10px 0;
+  border-bottom: 2px solid #dddddd;
+}
+.content_header h2 {
+  display: inline-block;
+  margin-top: -4px;
+  font-size: 28px;
+  color: #333333;
+}
+.content_header .breadcrumb {
+  float: right;
+  line-height: 28px;
+  letter-spacing: initial;
+}
+.content_header .breadcrumb li {
+  float: left;
+}
+.content_header .breadcrumb li .gt {
+  padding: 0 10px;
+}
+.content_header .breadcrumb li,
+.content_header .breadcrumb li a {
+  font-size: 13px;
+  line-height: 1.1;
+  color: #686868;
+}
+.content_header .breadcrumb li.active {
+  color: #c54053;
+}
+
+.content_body {
+  padding-top: 48px;
+}
+.content_body h3 {
+  display: inline-block;
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 33px;
+  color: #de0c0c;
+}
+.content_body h3 > small {
+  display: block;
+  margin-left: 2px;  
+  font-size: 12px;
+  letter-spacing: 0em;
+  font-weight: 600;
+}
+.content_body p {
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.75em;
+  color: #333333;
+}

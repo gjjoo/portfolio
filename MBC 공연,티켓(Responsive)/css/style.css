@@ -1,0 +1,250 @@
+@charset "UTF-8";
+
+/* common */
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select { margin: 0; padding: 0; }
+body, input, textarea, select, button, table { font-family: '나눔고딕', Nanumgothic; font-size: 14px; line-height: 1.25em; }
+body { -webkit-text-size-adjust: none; }
+img, fieldset { border: 0; }
+ul, ol { list-style: none; }
+em, address { font-style: normal; }
+a { color: #000; text-decoration: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+img { vertical-align: top; }
+button { overflow: visible; border: 0; background: transparent; white-space: nowrap; cursor: pointer; }
+button span { position: relative; }
+
+/* core */
+.blind { overflow: hidden; position: absolute; left: 0; width: 1px; height: 1px; font-size: 0; line-height: 0; white-space: nowrap; }
+.clear:after { display: block; clear: both; content: ''; }
+.sp { display: inline-block; overflow: hidden; background: url(../img/sp.png) no-repeat; line-height: 99em; vertical-align: top; }
+.center { position: relative; width: 980px; margin: 0 auto; }
+
+/* carousel */
+.carousel { overflow: hidden; }
+.carousel ul { white-space: nowrap; }
+.carousel ul li { display: inline-block; }
+
+/* skip */
+.skip_to_main { display: block; overflow: hidden; position: absolute; top: 0; z-index: 1; width: 100%; height: 1px;  background: #000; line-height: 44px; color: #fff; }
+.skip_to_main:focus { text-align: center; height: auto; }
+
+/* header */
+.gnb { border-bottom: 1px solid #243442; background-color: #334555; }
+.gnb .center { position: relative; }
+.gnb .with_mbc_logo { width: 88px; height: 39px; }
+.gnb .gnb_list { position: absolute; top: 0; right: 0; }
+.gnb .gnb_list li { float: left; }
+.gnb .login, .gnb .mbc, .gnb .news, .gnb .tv, .gnb .radio, .gnb .site_m { width: 65px; height: 39px; }
+.gnb .view { width: 67px; height: 39px; }
+.gnb .login { background-position: -90px 0; }
+.gnb .mbc { background-position: -158px 0; }
+.gnb .news { background-position: -226px 0; }
+.gnb .tv { background-position: -294px 0; }
+.gnb .radio { background-position: -362px 0; }
+.gnb .site_m { background-position: -430px 0; }
+.gnb .view { background-position: -499px 0; }
+.gnb .view.on { background-position: -568px 0; }
+.lnb { height: 90px; border-bottom: 1px solid #ddd; background-color: #fff; }
+.lnb .center { position: relative; }
+.lnb .ticket_ttl { overflow: hidden; width: 155px; height: 25px; margin-top: 35px; font-size: 0; background-position: 0 -41px; line-height: 99em; }
+.lnb .lnb_list { position: absolute; top: 0; right: 0; border-right: 1px solid #ddd; }
+.lnb .lnb_list li { float: left; width: 227px; border-left: 1px solid #ddd; text-align: center; line-height: 90px; }
+.lnb .lnb_list li a { display: block; height: 90px; }
+
+/* container */
+#container { position: relative; }
+h2 { line-height: 20px; height: 20px; }
+.sub_logo { width: 70px; height: 21px; margin-right: 11px; background-position: -301px -43px; vertical-align: middle; }
+.top { position: absolute; bottom: -70px; right: 1px; width: 55px; height: 26px; background-position: -170px -68px; }
+.intro_txt { margin: 15px 0 18px 0; font-size: 13px; line-height: 1.5em; }
+.bg_now_perform { padding: 43px 0 80px 0; background: url(../img/bg_nowPerform.jpg) no-repeat 50% 0; }
+.now_perform .now_info { position: relative; border-bottom: 3px solid #314151; background: #fff; }
+.now_perform .now_info a { padding-left: 32px; line-height: 55px; height: 55px; }
+.now_perform .banner_num { font-size: 16px; margin-right: 40px; }
+.now_perform .now_num { color: #d02c00; }
+.now_perform .banner_txt { font-size: 14px; color: #d02c00; margin-right: 19px; }
+.now_perform .banner_date { font-size: 12px; color: #d04900; }
+.now_perform .play_btn { position: absolute; top: 12px; right: 29px; }
+.now_perform .play_btn li { float: left; }
+.now_perform .prev, 
+.now_perform .play, 
+.now_perform .next { width: 32px; height: 32px; }
+.now_perform .prev { background-position: 0 -115px; }
+.now_perform .play { margin-left: 6px; background-position: -38px -115px; }
+.now_perform .next { margin-left: 6px; background-position: -77px -115px; }
+.bg_prev_perform { padding: 70px 0; background-color: #ffb900; }
+.prev_perform ul { border-left: 1px solid #ddd; }
+.prev_perform li { float: left; border-right: 1px solid #ddd; }
+.prev_perform li a { display: block; }
+.bg_mbc_intro { padding: 60px 0 70px 0; background-color: #51c7d5; }
+.mbc_intro .event_list li { float: left; margin-left: -1px; }
+.mbc_intro .event_list a { display: block; }
+.mbc_intro .event_list li img { display: block; border: 1px solid #ddd; }
+.mbc_intro .event_list li:first-child a img { margin-left: 0px; }
+.mbc_intro .event_list li p { overflow: hidden; border-left: 1px solid #ddd; padding-left: 13px; font-size: 13px; line-height: 37px; text-overflow: ellipsis; white-space: nowrap; word-wrap: normal; width: 232px; }
+.mbc_intro .event_list li:first-child a p { border-left: 0; }
+.mbc_intro .perform_info { margin: 34px 0 14px 0; }
+.mbc_intro .sub_txt, 
+.mbc_intro h3 { float: left; }
+.mbc_intro .sub_txt { font-size: 13px; line-height: 16px; margin-left: 19px; }
+
+/* footer */
+#footer { background-color: #fff; }
+.footer_top { border-bottom: 1px solid #ddd; }
+.logo_mbc, #footer .logo_imbc { overflow: hidden; font-size: 0; line-height: 99em; margin-top: 3px; vertical-align: middle; }
+.logo_mbc { width: 62px; height: 23px; margin-right: 20px; background-position: -157px -41px; }
+.logo_imbc { width: 75px; height: 23px; margin-right: 18px; background-position: -221px -41px; }
+.twitter { width: 34px; height: 34px; background-position: 0 -68px; }
+.facebook { width: 34px; height: 34px; background-position: -36px -68px; }
+.youtube { width: 34px; height: 34px; background-position: -72px -68px; }
+.mtok { width: 57px; height: 34px; background-position: -108px -68px; }
+.footer_info { position: relative; margin: 27px 0 32px 0; }
+/*span { line-height: 34px; }*/
+.copyright { font-size: 11px; }
+.sns { position: absolute; top: 0; right: 0; }
+.sns li { float: left; margin-left: 7px; }
+.footer_top button { display: block; float: left; position: relative; width: 490px; height: 50px; border: 1px solid #ddd; border-bottom: 0; }
+.btn_txt { display: inline-block; text-align: left; height: 41px; padding: 15px 0 0 18px;}
+.btn_upDown01 { display: inline-block; width: 15px; height: 8px; margin: 21px 20px 21px 19px;
+  position: absolute; top: 0; right: 0; background-position: -115px -115px; line-height: 50px;}
+.btn_upDown02 { display: inline-block; width: 15px; height: 8px; margin: 21px 20px 21px 19px;
+  position: absolute; top: 0; right: 0; background-position: -115px -115px; line-height: 50px; }
+.on .btn_upDown { background-position: -134px -115px; }
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+  /* center 고정폭 제거 */
+  /*body { overflow-x: hidden; }*/
+  body { overflow: hidden !important; height: 100% !important; }
+  html { overflow-y: scroll !important; }
+  .center { position: relative; width: 100%; margin: 0 auto; overflow: hidden;}
+  .bg_prev_perform, .bg_mbc_intro {
+    padding: 20px 5px;
+  }
+  .top { display: none; }
+
+  /* gnb */
+  .gnb .center {
+    padding-left: 5px;
+  }
+  .gnb_list {
+    display: none;
+  }
+
+  /* lnb */
+  .lnb {
+    height: 100%;
+  }
+  .lnb h1 {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+  }
+  .lnb .ticket_ttl {
+    margin-top: 0;
+    vertical-align: middle;
+  }
+  .lnb .lnb_list {
+    position: static;
+  }
+  .lnb .lnb_list li {
+    float: none;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border-top: 1px solid #334555;
+  }
+  .lnb .lnb_list li a {
+    height: 50px;
+  }
+
+  /* 공연행사안내 carousel */
+  .bg_now_perform {
+    padding: 0;
+    background: none;
+  }
+  .now_perform .now_info {
+    border: 0;
+  }
+  .carousel {
+    margin-bottom: -5px;
+  }
+  .carousel .now_info a {
+    display: none;
+  }
+  .carousel .now_info .play_btn {
+    top: -50px;
+  }
+  .carousel li {
+    width: 100%;
+  }
+  .carousel img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* 지난공연행사 */
+  .prev_perform ul {
+    /*border: 0;*/
+  }
+  .prev_perform li {
+    width: 50%;
+    border-bottom: 1px solid #ddd;
+  }
+  .prev_perform li:first-child {
+    margin-left: -2px;
+  }
+  .prev_perform li:last-child {
+     margin-left: -2px;
+    display: block;
+    clear: both;
+    content: '';
+  }
+
+  .prev_perform img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* 문화 사업부 소개 */
+  .mbc_intro li {
+    width: 50%;
+    border: 0;
+  }
+  .mbc_intro img {
+    width: 100%;
+  }
+  .mbc_intro .sub_txt {
+    margin: 5px 0 0 0;
+  }
+
+  /* footer */
+  .footer_top button {
+    float: none;
+    width: 100%;
+  }
+  .footer_info {
+    text-align: center;
+  }
+  .footer_info .copyright_logo {
+    display: block;
+    position: relative;
+  }
+  .footer_info .copyright {
+    display: block;
+  }
+  .footer_info .logo_mbc {
+    direction: inline-block;
+  }
+  .footer_info .logo_imbc {
+    direction: inline-block;
+    margin: 0;
+  }
+  .footer_info .sns {
+    position: relative;
+    left: 50%;
+    margin-left: -98px;
+  }
+
+}
