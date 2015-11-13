@@ -37,7 +37,7 @@
 						var jsonData = getTreeModel( data, '999',{
 			            	id: "itemId",
 			            	parentId: "parentId",
-                            j: ["label","desc"]
+                            order: ["label","desc"]
 						});
 						$("#afterJSON").html( JSON.stringify(jsonData, null, "    ") );
 
