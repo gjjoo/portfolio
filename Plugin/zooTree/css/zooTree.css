@@ -1,0 +1,292 @@
+/**
+ * Vertical Org Tree                                         
+ */
+.verticalTree * {
+	margin: 0; padding: 0;
+}
+.verticalTree {
+	display: table;
+}
+.verticalTree ul {
+	padding-top: 20px; 
+	position: relative;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+.verticalTree li {
+	float: left; 
+	text-align: center;
+	list-style-type: none;
+	position: relative;
+	padding: 20px 5px 0 5px;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+.verticalTree li:before,
+.verticalTree li:after {
+	content: '';
+	position: absolute; 
+	top: 0; 
+	right: 50%;
+	border-top: 1px solid #ccc;
+	width: 50%; height: 20px;
+}
+.verticalTree li:after {
+	right: auto; left: 50%;
+	border-left: 1px solid #ccc;
+}
+
+.verticalTree li:only-child:after,
+.verticalTree li:only-child:before {
+	display: none;
+}
+
+.verticalTree li:only-child {
+	padding-top: 0;
+}
+.verticalTree li:first-child:before,
+.verticalTree li:last-child:after {
+	border: 0 none;
+}
+.verticalTree li:last-child:before {
+	border-right: 1px solid #ccc;
+	border-radius: 0 5px 0 0;
+	-webkit-border-radius: 0 5px 0 0;
+	-moz-border-radius: 0 5px 0 0;
+}
+.verticalTree li:first-child:after {	
+	border-radius: 5px 0 0 0;
+	-webkit-border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0;
+}
+.verticalTree ul ul:before {
+	content: '';
+	position: absolute; top: 0; left: 50%;
+	border-left: 1px solid #ccc;
+	width: 0; height: 20px;
+}
+
+.verticalTree li a {
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: #666;
+	font-family: arial, verdana, tahoma;
+	font-size: 11px;
+	display: inline-block;
+	
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+.verticalTree li a:hover,
+.verticalTree li a:hover+ul li a {
+	background: #c8e4f8; 
+	color: #000; 
+	border: 1px solid #94a0b4;
+}
+.verticalTree li a:hover+ul li:after, 
+.verticalTree li a:hover+ul li:before, 
+.verticalTree li a:hover+ul:before, 
+.verticalTree li a:hover+ul ul:before {
+	border-color:  #94a0b4;
+}
+
+
+/**
+ * Horizontal Org Tree
+ */
+.horizontalTree {
+	display: table;
+}
+.horizontalTree ul {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 10px;
+}
+.horizontalTree li {
+	position: relative;
+	list-style-type: none;
+	width: 100%;
+	height: 100%;
+	padding: 5px 0px 5px 10px;
+}
+.horizontalTree li:before,
+.horizontalTree li:after {
+	content: '';
+	position: absolute; 
+	bottom: 50%; 
+	left: 0;
+	border-left: 1px solid #ccc;
+	height: 50%;
+	width: 10px;
+}
+.horizontalTree li:after {
+	bottom: auto;
+	top: 50%;
+	border-top: 1px solid #ccc;
+}
+
+.horizontalTree li:only-child:after,
+.horizontalTree li:only-child:before {
+	padding-right: 0;
+}
+.horizontalTree > ul > li:after {
+	border: 0 none;
+}
+.horizontalTree li:first-child:before,
+.horizontalTree li:last-child:after {
+	border-left: 0 none;
+	border-right: 0 none;
+}
+.horizontalTree ul ul:after {
+	content: '';
+	position: absolute; 
+	top: 50%; 
+	left: 0;
+	border-top: 1px solid #ccc;
+	width: 10px;
+}
+
+.horizontalTree li a {
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: #666;
+	font-family: arial, verdana, tahoma;
+	font-size: 11px;
+	display: inline-block;
+	vertical-align: middle;
+	
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+.horizontalTree li a:hover+ul:after,
+.horizontalTree li a:hover+ul ul:after {
+	border-color:  #94a0b4;
+}
+.horizontalTree li a:hover,
+.horizontalTree li a:hover+ul li a {
+	background: #c8e4f8; 
+	color: #000; 
+	border: 1px solid #94a0b4;
+}
+.horizontalTree li a:hover+ul li:after,
+.horizontalTree li a:hover+ul li:before, 
+.horizontalTree li a:hover+ul:before, 
+.horizontalTree li a:hover+ul ul:before {
+	border-color:  #94a0b4;
+}
+
+
+/**
+ * Horizontal Org Tree(Vertical-align:top)
+ */
+.horizontalTreeTop {
+	display: table;
+}
+.horizontalTreeTop {
+    padding-top: 10px;
+}
+.horizontalTreeTop ul {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 10px;
+}
+.horizontalTreeTop li {
+	vertical-align: middle;
+	position: relative;
+	list-style-type: none;
+	width: 100%;
+	height: 100%;
+	padding: 0px 0px 10px 10px;
+}
+.horizontalTreeTop li:before,
+.horizontalTreeTop li:after {
+	content: '';
+    position: absolute; 
+	width: 10px;
+}
+.horizontalTreeTop li:before {
+	bottom: 0;
+	border-left: 0 none;
+}
+.horizontalTreeTop li:after {
+	top: 10px;
+	bottom: auto;
+    left: 0;
+    height: 100%;
+    border-left: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+}
+
+.horizontalTreeTop li:only-child:after,
+.horizontalTreeTop li:only-child:before {
+	padding-right: 0;
+}
+.horizontalTreeTop > ul > li:after {
+	border: 0 none;
+}
+.horizontalTreeTop li:first-child:before,
+.horizontalTreeTop li:last-child:after {
+	border-left: 0 none;
+	border-right: 0 none;
+}
+.horizontalTreeTop ul ul:after {
+	content: '';
+	position: absolute; top: 10px; left: 0;
+	border-top: 1px solid #ccc;
+	width: 15px;
+}
+
+.horizontalTreeTop li a:hover+ul:after,
+.horizontalTreeTop li a:hover+ul ul:after {
+	border-color:  #94a0b4;
+}
+.horizontalTreeTop li a {
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: #666;
+	font-family: arial, verdana, tahoma;
+	font-size: 11px;
+	display: inline-block;
+	vertical-align: middle;
+	
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+.horizontalTreeTop li a:hover,
+.horizontalTreeTop li a:hover+ul li a {
+	background: #c8e4f8; 
+	color: #000; 
+	border: 1px solid #94a0b4;
+}
+.horizontalTreeTop li a:hover+ul li:after,
+.horizontalTreeTop li a:hover+ul li:before, 
+.horizontalTreeTop li a:hover+ul:before, 
+.horizontalTreeTop li a:hover+ul ul:before {
+	border-color:  #94a0b4;
+}

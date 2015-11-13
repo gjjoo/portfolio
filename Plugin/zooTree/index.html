@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>index</title>
+	<meta name="description" content="">
+	<meta name="author" content="JOO">
+
+	<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/prism.css">
+	<link rel="StyleSheet" href="css/zooTree.css" />
+
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="js/zooTree.js"></script>
+
+	<script>
+
+		$(document).ready(function(){
+
+			$.ajax({
+				async: false,
+				type: "GET",
+				url : "data/data.json",
+				dataType: "json",
+				cache: false,
+				success:function(data){
+					if(data.length == 0) {
+					}else{
+
+						$("#beforeJSON").html( JSON.stringify(data, null, "    ") );
+						var jsonData = getTreeModel( data, '999',{
+			            	id: "itemId",
+			            	parentId: "parentId",
+                            order: ["label","desc"]
+						});
+						$("#afterJSON").html( JSON.stringify(jsonData, null, "    ") );
+
+						$(".verticalTree").jooTree(jsonData, {
+							forceCreate: true,
+							render: function(data) {
+								var $a = $("<a>").append(data.label);
+								return $a;
+							}
+						});
+						$(".horizontalTree").jooTree(jsonData, {
+							forceCreate: true,
+							render: function(data) {
+								var $a = $("<a>").append(data.label);
+								return $a;
+							}
+						});
+						$(".horizontalTreeTop").jooTree(jsonData, {
+							forceCreate: true,
+							render: function(data) {
+								var $a = $("<a>").append(data.label);
+								return $a;
+							}
+						});
+
+					}
+				}
+			});
+
+		});
+
+	</script>
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<h1>JSON List데이터를 트리구조로 변환</h1>
+	<h2>선언문</h2>
+	<pre class="line-numbers"><code class="language-markup">&lt;script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="jsonTree.js"&gt;&lt;/script&gt;</code></pre>
+
+	<h2>변환해야 할 배열 모델</h2>
+	<p>첫번째 인수의 data안의 값이 배열이다</p>
+	<pre class="line-numbers"><code class="language-javascript">var jsonData = getTreeModel( data, '999',{
+    id: "itemId",
+    parentId: "parentId"
+});</code></pre>
+	<pre class="line-numbers"><code class="language-javascript">[
+    {
+        "label": "root",
+        "itemId": "root",
+        "parentId": "999"
+    },
+    {
+        "label": "User",
+        "itemId": "role1",
+        "parentId": "root"
+    },
+    {
+        "label": "subUser1",
+        "itemId": "role11",
+        "parentId": "role1"
+    },
+    {
+        "label": "subUser2",
+        "itemId": "role12",
+        "parentId": "role1"
+    },
+    {
+        "label": "subUser2-1",
+        "itemId": "role121",
+        "parentId": "role12"
+    },
+    {
+        "label": "subUser2-1-1",
+        "itemId": "role1211",
+        "parentId": "role121"
+    },
+    {
+        "label": "subUser2-1-2",
+        "itemId": "role1212",
+        "parentId": "role121"
+    },
+    {
+        "label": "Admin",
+        "itemId": "role2",
+        "parentId": "root"
+    },
+    {
+        "label": "Guest",
+        "itemId": "role3",
+        "parentId": "root"
+    }
+]</code></pre>
+	<br>
+	<h2>변환된 트리 모델</h2>
+	<p>두번째 인수가 최상위 부모값이 되고, 세번째 인수는 id(key)와 parentId(key)를 다른 키워드로 사용하고 싶을 때 커스텀 하여 사용할 수 있다</p>
+	<pre class="line-numbers"><code class="language-javascript">var jsonData = getTreeModel( data, '999',{
+    id: "itemId",
+    parentId: "parentId"
+});</code></pre>
+	<pre class="line-numbers"><code class="language-javascript">[
+    {
+        "label": "root",
+        "itemId": "root",
+        "parentId": "999",
+        "children": [
+            {
+                "label": "User",
+                "itemId": "role1",
+                "parentId": "root",
+                "children": [
+                    {
+                        "label": "subUser1",
+                        "itemId": "role11",
+                        "parentId": "role1",
+                        "children": []
+                    },
+                    {
+                        "label": "subUser2",
+                        "itemId": "role12",
+                        "parentId": "role1",
+                        "children": [
+                            {
+                                "label": "subUser2-1",
+                                "itemId": "role121",
+                                "parentId": "role12",
+                                "children": [
+                                    {
+                                        "label": "subUser2-1-1",
+                                        "itemId": "role1211",
+                                        "parentId": "role121",
+                                        "children": []
+                                    },
+                                    {
+                                        "label": "subUser2-1-2",
+                                        "itemId": "role1212",
+                                        "parentId": "role121",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "label": "Admin",
+                "itemId": "role2",
+                "parentId": "root",
+                "children": []
+            },
+            {
+                "label": "Guest",
+                "itemId": "role3",
+                "parentId": "root",
+                "children": []
+            }
+        ]
+    }
+]</code></pre>
+    <br><br><br>
+    <h1>JSON 트리구조를 UL,LI태그로 만들기</h1>
+    <h2>JSON 데이터 DOM &lt;ul&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ul&gt; 만드는 과정</h2>
+    <p>1. $(".verticalTree")로 반영 할 DOM 선택<br>
+    2. $(".verticalTree").jooTree(jsonData)에서 첫번째 인수 jsonData를 가지고 ul,li 태그로 만들어준다.(jsonData가 배열모델이든 Tree모델이든 상관없이 만들어준다)<br>
+    3. render를 이용하여 추가 태그를 생성할 수 있고, jsonData의 값을 맵핑할 수 있다.</p>
+    <pre class="line-numbers"><code class="language-javascript">$(".verticalTree").jooTree(jsonData, {
+forceCreate: true, // 현재 사용하지 않음
+render: function(data) { // &lt;li&gt;...&lt;/li&gt; 태그안에 내용을 커스텀 할 수 있다
+    var $div = $("&lt;a&gt;").append(data.label);
+    return $div;
+}</code></pre>
+
+    <br><br><br>
+    <h1>CSS로 만든 조직도</h1>
+    <h2>선언문</h2>
+    <pre class="line-numbers"><code class="language-markup">&lt;link rel="stylesheet" type="text/css" href="jooOrgTree.css"&gt;
+&lt;script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="jooTree.js"&gt;&lt;/script&gt;</code></pre>
+	<h2>세로형 조직도</h2>
+	<pre class="line-numbers"><code class="language-javascript">$(".verticalTree").jooTree(jsonData, {
+    forceCreate: true, // 현재 사용하지 않음
+    render: function(data) { // &lt;li&gt;...&lt;/li&gt; 태그안에 내용을 커스텀 할 수 있다
+        var $div = $("&lt;a&gt;").append(data.label);
+        return $div;
+    }
+});</code></pre>
+    <pre class="line-numbers"><code class="language-markup">&lt;div class="verticalTree"&gt;&lt;/div&gt;</code></pre>
+	<div class="verticalTree"></div>
+
+	<h2>가로형 조직도(최상위계층:중단)</h2>
+	<pre class="line-numbers"><code class="language-javascript">$(".horizontalTree").jooTree(jsonData, {
+    forceCreate: true, // 현재 사용하지 않음
+    render: function(data) { // &lt;li&gt;...&lt;/li&gt; 태그안에 내용을 커스텀 할 수 있다
+        var $div = $("&lt;a&gt;").append(data.label);
+        return $div;
+    }
+});</code></pre>
+    <pre class="line-numbers"><code class="language-markup">&lt;div class="horizontalTree"&gt;&lt;/div&gt;</code></pre>
+	<div class="horizontalTree"></div>
+
+	<h2>가로형 조직도(최상위계층:상단)</h2>
+	<pre class="line-numbers"><code class="language-javascript">$(".horizontalTreeTop").jooTree(jsonData, {
+    forceCreate: true, // 현재 사용하지 않음
+    render: function(data) { // &lt;li&gt;...&lt;/li&gt; 태그안에 내용을 커스텀 할 수 있다
+        var $div = $("&lt;a&gt;").append(data.label);
+        return $div;
+    }
+});</code></pre>
+    <pre class="line-numbers"><code class="language-markup">&lt;div class="horizontalTreeTop"&gt;&lt;/div&gt;</code></pre>
+	<div class="horizontalTreeTop"></div>
+
+	<script src="js/prism.js"></script>
+</body>
+</html>
