@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/* 공통 */
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select { margin: 0; padding: 0; }
+
+body, input, textarea, select, button, table { font-family: '나눔고딕', '맑은고딕'; font-size: 14px; line-height: 1.25em; }
+
+body { -webkit-text-size-adjust: none; }
+
+img, fieldset { border: 0; }
+
+ul, ol { list-style: none; }
+
+em, address { font-style: normal; }
+
+a { color: #000; text-decoration: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+img { vertical-align: top; }
+
+button { overflow: visible; border: 0; background: transparent; white-space: nowrap; cursor: pointer; }
+
+button span { position: relative; }
+
+.blind { overflow: hidden; position: absolute; left: 0; width: 1px; height: 1px; font-size: 0; line-height: 0; white-space: nowrap; }
+
+.clear { zoom: 1; }
+
+.clear:after { display: block; clear: both; content: ''; }
+
+.sp { display: inline-block; overflow: hidden; background: url(../img/sp.png) no-repeat; line-height: 99em; vertical-align: top; }
+
+/* 한게임 이벤트 */
+#wrap { width: 100%; position: relative; background: url(../img/aa.jpg) no-repeat 50% 0; }
+
+#wrap #content { width: 960px; margin: 0 auto; }
+
+#wrap #content .tt { background: url(../img/tt.jpg) no-repeat 0 0; height: 450px; position: relative; /* 링크_2탄 */ }
+
+#wrap #content .tt .link_logo { background-position: -223px 0; width: 148px; height: 37px; position: absolute; top: 19px; left: 5px; }
+
+#wrap #content .tt .gnb { position: absolute; top: 25px; right: 4px; color: #fff; }
+
+#wrap #content .tt .gnb a { color: #fff; }
+
+#wrap #content .tt .gnb .link_logout { background-position: -376px 0; width: 55px; height: 18px; }
+
+#wrap #content .tt .gnb .link_logout:hover { background-position: -376px -18px; }
+
+#wrap #content .tt .link_2h { background-position: 0 0; width: 97px; height: 82px; position: absolute; top: 222px; right: 28px; cursor: pointer; }
+
+#wrap #content .mm { background: url(../img/mm.jpg) no-repeat 0 0; height: 883px; position: relative; }
+
+#wrap #content .mm .btn_mm { background-position: -100px 0; width: 117px; height: 18px; position: absolute; top: 443px; left: 440px; cursor: pointer; }
+
+#wrap #content .mm .btn_mm:hover { background-position: -100px -18px; }
+
+#wrap #content .bb { background: url(../img/bb.jpg) no-repeat 0 0; height: 167px; }
