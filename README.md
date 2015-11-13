@@ -10,7 +10,7 @@
 ###### Responsive
 - [네이버 댓글](Responsive/네이버_댓글)
 - [카카오스토리](Responsive/카카오스토리)
-- [MBC 공연티켓](Responsive/MBC_공연티켓))
+- [MBC 공연티켓](Responsive/MBC_공연티켓)
 
 ###### Event
 - [네이버 마일리지센터](Event/네이버_마일리지센터)
