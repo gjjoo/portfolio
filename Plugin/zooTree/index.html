@@ -37,25 +37,25 @@
 						var jsonData = getTreeModel( data, '999',{
 			            	id: "itemId",
 			            	parentId: "parentId",
-                            order: ["label","desc"]
+                            j: ["label","desc"]
 						});
 						$("#afterJSON").html( JSON.stringify(jsonData, null, "    ") );
 
-						$(".verticalTree").jooTree(jsonData, {
+						$(".verticalTree").zooTree(jsonData, {
 							forceCreate: true,
 							render: function(data) {
 								var $a = $("<a>").append(data.label);
 								return $a;
 							}
 						});
-						$(".horizontalTree").jooTree(jsonData, {
+						$(".horizontalTree").zooTree(jsonData, {
 							forceCreate: true,
 							render: function(data) {
 								var $a = $("<a>").append(data.label);
 								return $a;
 							}
 						});
-						$(".horizontalTreeTop").jooTree(jsonData, {
+						$(".horizontalTreeTop").zooTree(jsonData, {
 							forceCreate: true,
 							render: function(data) {
 								var $a = $("<a>").append(data.label);
@@ -79,13 +79,14 @@
 	<h1>JSON List데이터를 트리구조로 변환</h1>
 	<h2>선언문</h2>
 	<pre class="line-numbers"><code class="language-markup">&lt;script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="jsonTree.js"&gt;&lt;/script&gt;</code></pre>
+&lt;script type="text/javascript" src="js/zooTree.js"&gt;&lt;/script&gt;</code></pre>
 
 	<h2>변환해야 할 배열 모델</h2>
 	<p>첫번째 인수의 data안의 값이 배열이다</p>
 	<pre class="line-numbers"><code class="language-javascript">var jsonData = getTreeModel( data, '999',{
     id: "itemId",
-    parentId: "parentId"
+    parentId: "parentId",
+    order: ["label","desc"]
 });</code></pre>
 	<pre class="line-numbers"><code class="language-javascript">[
     {
@@ -139,7 +140,8 @@
 	<p>두번째 인수가 최상위 부모값이 되고, 세번째 인수는 id(key)와 parentId(key)를 다른 키워드로 사용하고 싶을 때 커스텀 하여 사용할 수 있다</p>
 	<pre class="line-numbers"><code class="language-javascript">var jsonData = getTreeModel( data, '999',{
     id: "itemId",
-    parentId: "parentId"
+    parentId: "parentId",
+    order: ["label","desc"]
 });</code></pre>
 	<pre class="line-numbers"><code class="language-javascript">[
     {
@@ -205,9 +207,9 @@
     <h1>JSON 트리구조를 UL,LI태그로 만들기</h1>
     <h2>JSON 데이터 DOM &lt;ul&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ul&gt; 만드는 과정</h2>
     <p>1. $(".verticalTree")로 반영 할 DOM 선택<br>
-    2. $(".verticalTree").jooTree(jsonData)에서 첫번째 인수 jsonData를 가지고 ul,li 태그로 만들어준다.(jsonData가 배열모델이든 Tree모델이든 상관없이 만들어준다)<br>
+    2. $(".verticalTree").zooTree(jsonData)에서 첫번째 인수 jsonData를 가지고 ul,li 태그로 만들어준다.(jsonData가 배열모델이든 Tree모델이든 상관없이 만들어준다)<br>
     3. render를 이용하여 추가 태그를 생성할 수 있고, jsonData의 값을 맵핑할 수 있다.</p>
-    <pre class="line-numbers"><code class="language-javascript">$(".verticalTree").jooTree(jsonData, {
+    <pre class="line-numbers"><code class="language-javascript">$(".verticalTree").zooTree(jsonData, {
 forceCreate: true, // 현재 사용하지 않음
 render: function(data) { // &lt;li&gt;...&lt;/li&gt; 태그안에 내용을 커스텀 할 수 있다
     var $div = $("&lt;a&gt;").append(data.label);
@@ -217,11 +219,11 @@ render: function(data) { // &lt;li&gt;...&lt;/li&gt; 태그안에 내용을 커�
     <br><br><br>
     <h1>CSS로 만든 조직도</h1>
     <h2>선언문</h2>
-    <pre class="line-numbers"><code class="language-markup">&lt;link rel="stylesheet" type="text/css" href="jooOrgTree.css"&gt;
+    <pre class="line-numbers"><code class="language-markup">&lt;link rel="stylesheet" type="text/css" href="css/zooTree.css"&gt;
 &lt;script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="jooTree.js"&gt;&lt;/script&gt;</code></pre>
+&lt;script type="text/javascript" src="js/zooTree.js"&gt;&lt;/script&gt;</code></pre>
 	<h2>세로형 조직도</h2>
-	<pre class="line-numbers"><code class="language-javascript">$(".verticalTree").jooTree(jsonData, {
+	<pre class="line-numbers"><code class="language-javascript">$(".verticalTree").zooTree(jsonData, {
     forceCreate: true, // 현재 사용하지 않음
     render: function(data) { // &lt;li&gt;...&lt;/li&gt; 태그안에 내용을 커스텀 할 수 있다
         var $div = $("&lt;a&gt;").append(data.label);
@@ -232,7 +234,7 @@ render: function(data) { // &lt;li&gt;...&lt;/li&gt; 태그안에 내용을 커�
 	<div class="verticalTree"></div>
 
 	<h2>가로형 조직도(최상위계층:중단)</h2>
-	<pre class="line-numbers"><code class="language-javascript">$(".horizontalTree").jooTree(jsonData, {
+	<pre class="line-numbers"><code class="language-javascript">$(".horizontalTree").zooTree(jsonData, {
     forceCreate: true, // 현재 사용하지 않음
     render: function(data) { // &lt;li&gt;...&lt;/li&gt; 태그안에 내용을 커스텀 할 수 있다
         var $div = $("&lt;a&gt;").append(data.label);
@@ -243,7 +245,7 @@ render: function(data) { // &lt;li&gt;...&lt;/li&gt; 태그안에 내용을 커�
 	<div class="horizontalTree"></div>
 
 	<h2>가로형 조직도(최상위계층:상단)</h2>
-	<pre class="line-numbers"><code class="language-javascript">$(".horizontalTreeTop").jooTree(jsonData, {
+	<pre class="line-numbers"><code class="language-javascript">$(".horizontalTreeTop").zooTree(jsonData, {
     forceCreate: true, // 현재 사용하지 않음
     render: function(data) { // &lt;li&gt;...&lt;/li&gt; 태그안에 내용을 커스텀 할 수 있다
         var $div = $("&lt;a&gt;").append(data.label);
