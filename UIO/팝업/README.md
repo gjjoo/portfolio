@@ -1,3 +1,3 @@
 # 팝업
 - TYPE : UIO
-- URL  : http://gjjoo.github.io/portfolio/팝업(UIO)/index.html
+- URL  : http://gjjoo.github.io/portfolio/UIO/팝업/index.html
